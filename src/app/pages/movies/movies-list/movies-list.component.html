@@ -1,0 +1,51 @@
+<h3>Listado de peliculas</h3>
+
+<form (submit)="filtrar($event)">
+  <!-- <input type="text" [(ngModel)]="query" (keypress)="validateEnter($event)"> <button (click)="filtrar($event)">Buscar</button> -->
+  <mat-form-field appearance="outline">
+    <!-- <mat-label>Legacy form field</mat-label> -->
+    <input matInput type="text" [(ngModel)]="query" name="texto">
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    <mat-hint>Hint</mat-hint>
+  </mat-form-field>
+  <button mat-stroked-button color="primary">Basic</button>
+</form>
+<hr>
+<h3>grid list</h3>
+<mat-tab-group mat-align-tabs="start">
+
+
+  
+
+  <mat-tab label="Grid">
+    <div class="movie-list">
+      <div *ngFor="let item of filteredMovies">
+        <app-movie-item [movie]="item"></app-movie-item>
+      </div>
+
+      <!-- <table mat-table [dataSource]="movies" class="mat-elevation-z8">
+        <ng-container matColumnDef="title">
+          <th mat-header-cell *matHeaderCellDef> No. </th>
+          <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+        </ng-container>
+        <ng-container matColumnDef="plot">
+          <th mat-header-cell *matHeaderCellDef> Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.plot}} </td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table> -->
+
+    </div>
+  </mat-tab>
+
+  <mat-tab label="list">
+      nada
+  </mat-tab>
+</mat-tab-group>
+<!-- <app-grid-list [items]="movies">
+  <h1>hola</h1>
+</app-grid-list> -->
+<hr>
+

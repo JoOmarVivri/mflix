@@ -1,0 +1,14 @@
+@import '../../../../sass/variables';
+.movies-list{
+  background-color: $backcolorimage;
+  margin-top: 20px;
+  & > div{
+    float: left;
+    text-align: center;
+
+     img{
+      max-width: 100%;
+      height: 250px;
+    }
+  }
+}

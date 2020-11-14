@@ -1,0 +1,12 @@
+.movie-list{
+  display: block;
+  width: 100%;
+}
+.movie-list > div{
+  float: left;
+  width: 25%;
+  height: 500px;
+  padding: 20px;
+  border: 0px solid #ccc;
+  box-sizing: border-box;
+}

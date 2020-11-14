@@ -1,0 +1,36 @@
+<a  *ngIf="movieID" routerLink="/movies">Regresar a listado</a>
+<!-- <div class="movies-list">
+  <div>
+    <h3>{{movie.title}}</h3>
+    <p>{{movie.plot}}</p>
+    <img *ngIf="movie.poster" [src]="movie.poster" alt="movie poste">
+    <img *ngIf="!movie.poster" src="https://zoomnearby.com/resources/media/images/common/Image-not-found.jpg
+      " alt="movie poste">
+    <star-rating value="3" totalstars="5" checkedcolor="red" uncheckedcolor="black" size="24px" readonly="false">
+    </star-rating>
+  </div>
+</div> -->
+<div class="movies-list">
+  <div>
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{movie.title}}</mat-card-title>
+      </mat-card-header>
+      <img *ngIf="movie.poster"
+        src="{{movie.poster || 'https://zoomnearby.com/resources/media/images/common/Image-not-found.jpg'}}"
+        alt="movie poste">
+      <!-- <img *ngIf="movie.poster" [appPosterUrl]="movie.poster"  alt="movie poste"> -->
+      <mat-card-content>
+        <p>
+          {{movie.plot}}
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>LIKE</button>
+        <button mat-button>SHARE</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  <a *ngIf="!movieID" routerLink="{{movie.id}}">Ver mas {{movie.id}}</a>
+</div>
